@@ -1,28 +1,25 @@
-#we are creating a calculator that will add, subtract, multiply and find the quotient
-# Basic Calculator Program
+# Step 1: Create an empty list
+my_list = []
 
-# Get user input
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operator = input("Enter an operation (+, -, *, /): ")
+# Step 2: Append elements
+my_list.append(10)
+my_list.append(20)
+my_list.append(30)
+my_list.append(40)
 
-# Perform calculation
-if operator == '+':
-    result = num1 + num2
-elif operator == '-':
-    result = num1 - num2
-elif operator == '*':
-    result = num1 * num2
-elif operator == '/':
-    if num2 != 0:
-        result = num1 / num2
-    else:
-        print("Error: Cannot divide by zero.")
-        result = None10
-else:
-    print("Error: Invalid operator.")
-    result = None
+# Step 3: Insert 15 at second position (index 1)
+my_list.insert(1, 15)
 
-# Display result
-if result is not None:
-    print(f"{num1} {operator} {num2} = {result}")
+# Step 4: Extend with another list
+my_list.extend([50, 60, 70])
+
+# Step 5: Remove the last element
+my_list.pop()
+
+# Step 6: Sort in ascending order
+my_list.sort()
+
+# Step 7: Find and print index of 30
+index_of_30 = my_list.index(30)
+print("Sorted List:", my_list)
+print("Index of 30:", index_of_30)
